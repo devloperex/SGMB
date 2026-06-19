@@ -218,48 +218,68 @@
         }
 
         /* Proprietor Cards Layout */
-        .owners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
+.owners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
 
-        .owner-luxury-card {
-            background: linear-gradient(to bottom, var(--royal-burgundy), #2D080E);
-            color: var(--white);
-            padding: 50px;
-            text-align: center;
-            border: 2px solid var(--gold-primary);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
-        }
+.owner-luxury-card {
+    color: var(--white);
+    padding: 50px;
+    text-align: center;
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    
+    /* Default settings taaki images barabar set ho sakein */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-        .owner-luxury-card:hover {
-            transform: translateY(-10px);
-        }
+.owner-luxury-card:hover {
+    transform: translateY(-10px);
+}
 
-        .owner-luxury-card i {
-            font-size: 4rem;
-            color: var(--gold-primary);
-            margin-bottom: 25px;
-        }
+.owner-luxury-card i {
+    font-size: 4rem;
+    color: var(--gold-primary);
+    margin-bottom: 25px;
+}
 
-        .owner-luxury-card h4 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
+.owner-luxury-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    /* text-shadow lagaya h taaki photo ke upar naam ekdum saaf dikhe */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
 
-        .owner-luxury-card p {
-            color: #D4AF37;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-        }
+.owner-luxury-card p {
+    color: #D4AF37;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
 
+/* YAHAN SE AAPKI IMAGES AB CONNECT HONGYI (IDs ke jariye) */
+
+/* Ramkishan ji ke card ka background */
+#owner-ramkishan {
+    background: linear-gradient(rgba(74, 14, 23, 0.75), rgba(45, 8, 14, 0.85)), 
+                url('ram.jpeg'); /* <-- Yahan photo ka link ya naam badlein */
+}
+
+/* Deendayal ji ke card ka background */
+#owner-deendayal {
+    background: linear-gradient(rgba(74, 14, 23, 0.75), rgba(45, 8, 14, 0.85)), 
+                url('pp.jpeg'); /* <-- Yahan photo ka link ya naam badlein */
+    }
         /* High Quality Authentic Product Showcase */
         .products-section {
             background-color: #FDF9F3;
@@ -508,18 +528,20 @@
             <h3>8. Future Visions: Digitalization, Innovation, and Heritage Preservation</h3>
             <p>As we march forward into the modern digital age, SGMB is actively building a balance between ancient culinary preservation and modern user experiences. While our core sweet recipes will remain completely untouched by industrial automation to protect their unique hand-crafted charm, our consumer-facing interfaces are evolving rapidly. This premium digital architecture is designed to make our presence easily accessible to a global audience searching for genuine Rajasthani sweet excellence. We are establishing comprehensive digital communication frameworks, advanced corporate order tracking systems, and enhanced packaging methodologies to protect our delicate Desi Ghee textures across extended geographical transits, ensuring that the legendary taste of Ramgarh can be relished flawlessly anywhere in the world.</p>
 
-            <div class="owners-container">
-                <div class="owners-grid">
-                    <div class="owner-luxury-card">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <h4>Ramkishan Sharma</h4>
-                        <p>Co-Founder</p>
-                    </div>
-                    <div class="owner-luxury-card">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <h4>Deendayal Sharma</h4>
-                        <p><strong>founder & owner</strong></p>
-                    </div>
+       <div class="owners-container">
+    <div class="owners-grid">
+        
+        <div class="owner-luxury-card" id="owner-ramkishan">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4>Ramkishan Sharma</h4>
+            <p>Co-Founder</p>
+        </div>
+
+        <div class="owner-luxury-card" id="owner-deendayal">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4>Deendayal Sharma</h4>
+            <p><strong>founder & owner</strong></p>
+        </div>
                 </div>
             </div>
         </div>
