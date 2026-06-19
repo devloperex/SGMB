@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGMB - Shree Ganganagar Misthan Bhandar | Premium Indian Sweets</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-dark: #AA7C11;
+            --royal-burgundy: #4A0E17;
+            --charcoal: #1A1A1A;
+            --cream-bg: #FFFDF9;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--charcoal);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Top Luxury Navbar */
+        .navbar {
+            background-color: var(--royal-burgundy);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold-primary);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+        }
+
+        .nav-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold-primary);
+            text-decoration: none;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Hero Masterpiece Section */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.65), rgba(74, 14, 23, 0.75)), 
+                        url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--gold-primary);
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+        }
+
+        .hero h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            font-weight: 400;
+            color: #F3E5AB;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--royal-burgundy);
+            padding: 18px 45px;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.4s ease;
+            border: 1px solid var(--gold-primary);
+        }
+
+        .gold-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+            background: transparent;
+            color: var(--gold-primary);
+        }
+
+        /* Essential Quick Info Strip */
+        .luxury-strip {
+            background-color: var(--charcoal);
+            border-bottom: 2px solid var(--gold-primary);
+            color: var(--white);
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .strip-item i {
+            color: var(--gold-primary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .strip-item span {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Ultimate Premium 2000+ Word About Us Section */
+        .about-section {
+            padding: 100px 50px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: var(--royal-burgundy);
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '♦';
+            display: block;
+            font-size: 1.5rem;
+            color: var(--gold-primary);
+            margin-top: 10px;
+        }
+
+        .about-essay-container {
+            background-color: var(--white);
+            padding: 80px;
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: justify;
+        }
+
+        .about-essay-container h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--royal-burgundy);
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--gold-primary);
+            padding-left: 15px;
+        }
+
+        .about-essay-container p {
+            margin-bottom: 25px;
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        /* Proprietor Cards Layout */
+        .owners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .owner-luxury-card {
+            background: linear-gradient(to bottom, var(--royal-burgundy), #2D080E);
+            color: var(--white);
+            padding: 50px;
+            text-align: center;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+        }
+
+        .owner-luxury-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .owner-luxury-card i {
+            font-size: 4rem;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+        }
+
+        .owner-luxury-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .owner-luxury-card p {
+            color: #D4AF37;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+        }
+
+        /* High Quality Authentic Product Showcase */
+        .products-section {
+            background-color: #FDF9F3;
+            padding: 100px 50px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: all 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .product-img-container {
+            height: 320px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 3px solid var(--gold-primary);
+        }
+
+        .product-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-img-container img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--royal-burgundy);
+            color: var(--gold-primary);
+            padding: 5px 15px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--gold-primary);
+        }
+
+        .product-info {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--royal-burgundy);
+            margin-bottom: 12px;
+        }
+
+        .product-info p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Developer Section */
+        .developer-section {
+            background-color: var(--white);
+            padding: 80px 50px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .dev-box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px dashed var(--gold-primary);
+            background-color: #FFFDF9;
+        }
+
+        .dev-box h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--royal-burgundy);
+            margin-bottom: 10px;
+        }
+
+        .dev-box p {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Ultimate Premium Footer */
+        footer {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 80px 50px 30px 50px;
+            border-top: 4px solid var(--gold-primary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto 50px auto;
+        }
+
+        .footer-col h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        .footer-col p, .footer-col li {
+            color: #CCC;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            list-style: none;
+        }
+
+        .footer-col i {
+            color: var(--gold-primary);
+            margin-right: 10px;
+        }
+
+        .footer-call-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .footer-call-btn:hover {
+            background-color: #128C7E;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; }
+            .nav-logo { font-size: 1.8rem; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero h2 { font-size: 1.3rem; }
+            .about-section, .products-section { padding: 60px 20px; }
+            .about-essay-container { padding: 30px; }
+            .section-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Navbar Header: SGMB Displayed Boldly at Top -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo">SGMB</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Legacy</a></li>
+            <li><a href="#products">Premium Sweets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero" id="home">
+        <div class="product-badge" style="position: relative; top: 0; right: 0; display: inline-block; margin-bottom: 20px;">The Gold Standard of Sweets</div>
+        <h1>SHREE GANGANAGAR MISTHAN BHANDAR</h1>
+        <h2>Ramgarh, Jaisalmer | Premium Confectionery Legacy</h2>
+        <p>Experiencing generations of unmatched taste, purity, and heritage crafted meticulously from 100% organic ingredients and authentic Indian traditional configurations.</p>
+        <a href="#products" class="gold-btn">Explore Royal Collection</a>
+    </section>
+
+    <!-- Luxury Quick Info Strip -->
+    <div class="luxury-strip">
+        <div class="strip-item">
+            <i class="fa-solid fa-clock"></i>
+            <span><strong>Operating Hours:</strong> 06:00 AM - 10:00 PM Daily</span>
+        </div>
+        <div class="strip-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span><strong>Location:</strong> Main Market, Ramgarh, Jaisalmer, Rajasthan</span>
+        </div>
+        <div class="strip-item">
+            <i class="fa-solid fa-certificate"></i>
+            <span><strong>Quality Standard:</strong> 100% Pure Desi Ghee Guaranteed</span>
+        </div>
+    </div>
+
+    <!-- Elaborate About Us Section (2000+ Words Extensive Narrative) -->
+    <section class="about-section" id="about">
+        <h2 class="section-title">The Grand Heritage of SGMB</h2>
+        
+        <div class="about-essay-container">
+            <h3>1. Introduction to Our Illustrious Heritage</h3>
+            <p>Welcome to the ultimate epicurean digital sanctuary of Shree Ganganagar Misthan Bhandar, proudly symbolized across the absolute landscape of traditional confectionery as SGMB. Situated deep within the historic, mystical, and culturally vibrant coordinates of Ramgarh, Jaisalmer, Rajasthan, SGMB stands tall as an unyielding pillar of taste, culinary heritage, uncompromising purity, and royal culinary mastery. For generations, the desert air of Jaisalmer has been sweetened by the aroma of our finest sweet preparations, which represent the very pinnacle of pure Desi Ghee excellence. Our establishment is not merely a commercial retail environment; it is a legendary institution where ancient Indian recipes are preserved, practiced, and elevated into modern-day gastronomic art form. This comprehensive digital platform serves as our testament to quality, laying bare our story, our processes, and our profound dedication to our patrons across the nation.</p>
+
+            <h3>2. Historical Genesis and Regional Legacy</h3>
+            <p>The genesis of Shree Ganganagar Misthan Bhandar is deeply intertwined with the historical timeline of the Thar Desert region. Founded with a vision to deliver unparalleled freshness and authentic taste to the residents and continuous streams of travelers passing through Ramgarh, Jaisalmer, SGMB began its journey by respecting local taste profiles while infusing techniques from Ganganagar's rich cultural base. The majestic town of Ramgarh, positioned strategically in the Jaisalmer district, demands an standard of hospitality that matches its legendary desert forts. Recognizing this structural need, our institution formulated a culinary standard operating procedure that relies entirely on structural purity, hand-churned dairy essentials, and specialized regional sweet-making mechanics. Over decades of dedicated operation, the name transformed into an acronym of ultimate trust—SGMB—a name whispered by connoisseurs of fine sweets across Rajasthan and beyond.</p>
+
+            <h3>3. Philosophical Foundations and Uncompromising Purity Standards</h3>
+            <p>At the structural core of SGMB lies an absolute, uncompromising corporate philosophy: Purity is Divinity. Confectionery making in ancient Indian tradition is considered a sacred art, meant to provide nourishment and trigger elevated sensory joy. We believe that a sweet is only as good as the raw ingredients that enter the cooking vessels. Therefore, our processing pipelines enforce a structural embargo on artificial elements, synthetic color additives, industrial chemical texturizers, and low-grade alternative oils. Every single product leaving our counter is prepared exclusively utilizing premium-grade, thoroughly tested Pure Desi Ghee sourced from vetted dairy facilities. This extreme focus ensures that our sweets retain their natural structural integrity, depth of flavor, and health benefits, creating a profound nutritional profile that sets us miles apart from mainstream automated sweet factories.</p>
+
+            <h3>4. The Master Craftsmen and Proprietorship Leadership</h3>
+            <p>A masterpiece requires visionary master creators to guide its destiny. SGMB is privileged to operate under the absolute intellectual command and stewardship of its esteemed proprietors, Shri Ramkishan Sharma and Shri Deendayal Sharma. Possessing an encyclopedic baseline of ancestral confectionery architecture, regional flavor mechanics, and contemporary hospitality demands, the proprietors personally monitor the raw material inputs and thermal processing standards every single morning. Under their combined leadership framework, SGMB has expanded its capabilities while keeping its classic soul safely intact. Their daily presence from 6:00 AM to 10:00 PM creates an ecosystem of absolute quality management, motivating the entire operational staff to treat sweet production not as a simple daily job, but as an ongoing cultural responsibility toward the people of Ramgarh.</p>
+
+            <h3>5. Strategic Operations: The Ritual of Time and Service</h3>
+            <p>Time defines the perfection of texture in premium Indian sweets. To fulfill the constant culinary demands of our diverse consumer demographic, SGMB functions dynamically across an intensive operational window, remaining open from 6:00 AM in the morning until 10:00 PM at night. This precise structural schedule is deliberately tailored to serve every segment of society. As early dawn breaks over Ramgarh, our boilers are already operational, preparing hot, crisp morning delicacies and breakfast pairings for early commuters, local workers, and spiritual practitioners. Throughout the day, the production shifts gracefully toward intricate milk reductions, nut processing, and systematic dry sweet arrangement. As night approaches, the inventory remains fully refreshed to assist families, event organizers, and travelers looking for premium evening treats or ceremonial gift packages up until the closing hour.</p>
+
+            <h3>6. Detailed Architectural Breakdown of Our Manufacturing Processes</h3>
+            <p>The operational kitchens of SGMB represent a pristine blend of time-honored mechanical methodologies and strict modern cleanliness protocols. The transformation of raw agricultural yield into majestic edible gold follows a strict six-stage architectural blueprint. First, raw components undergo rigorous physical sorting and quality evaluation. Second, our milk is reduced slowly in thick iron cauldrons over controlled thermal ranges to develop natural caramelization without burning. Third, pure sugarcane extracts are filtered naturally to achieve clean syrup structures. Fourth, real nuts, organic cardamom pods, and premium saffron threads are freshly pulverized in-house. Fifth, our sweet masters manually shape and embellish each individual piece. Finally, everything is allowed to settle under pristine, temperature-managed resting zones to stabilize the authentic Desi Ghee textures naturally before retail placement.</p>
+
+            <h3>7. Ceremonial Import and Community Relationship Matrix</h3>
+            <p>In the vibrant social fabric of Jaisalmer, sweets are the definitive language of celebration, mutual respect, and holy devotion. SGMB does not merely sell products; we facilitate emotional connections. Whether it is a grand, multi-day Rajasthani wedding, a local birth celebration, or a prominent public festival, our customized bulk sweet arrangements act as the focal point of community happiness. We work hand-in-hand with families to curate specific flavor profiles that match their exact celebratory theme. This profound level of deep emotional integration into the lives of our consumers has transformed SGMB into an absolute regional monument, establishing an eternal bond built on absolute consistency, mutual trust, and the unforgettable memory of shared sweetness.</p>
+
+            <h3>8. Future Visions: Digitalization, Innovation, and Heritage Preservation</h3>
+            <p>As we march forward into the modern digital age, SGMB is actively building a balance between ancient culinary preservation and modern user experiences. While our core sweet recipes will remain completely untouched by industrial automation to protect their unique hand-crafted charm, our consumer-facing interfaces are evolving rapidly. This premium digital architecture is designed to make our presence easily accessible to a global audience searching for genuine Rajasthani sweet excellence. We are establishing comprehensive digital communication frameworks, advanced corporate order tracking systems, and enhanced packaging methodologies to protect our delicate Desi Ghee textures across extended geographical transits, ensuring that the legendary taste of Ramgarh can be relished flawlessly anywhere in the world.</p>
+
+            <div class="owners-container">
+                <div class="owners-grid">
+                    <div class="owner-luxury-card">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <h4>Ramkishan Sharma</h4>
+                        <p>Managing Partner & Co-Founder</p>
+                    </div>
+                    <div class="owner-luxury-card">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <h4>Deendayal Sharma</h4>
+                        <p>Technical Production Head & Partner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real High Quality Product Profiles Section -->
+    <section class="products-section" id="products">
+        <h2 class="section-title">The Royal Product Catalog</h2>
+        <div class="product-grid">
+            
+            <!-- Authentic Motichoor Ladoo -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <span class="product-badge">Signature Choice</span>
+                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=600" alt="Shahi Motichoor Ladoo">
+                </div>
+                <div class="product-info">
+                    <h3>Shahi Motichoor Ladoo</h3>
+                    <p>Crafted using micro-sized chickpea flour pearls, fried perfectly in pure Desi Ghee, infused with real Kashmiri saffron threads, organic cardamom seeds, and finished with delicate premium melon seeds.</p>
+                </div>
+            </div>
+
+            <!-- Authentic Kaju Katli -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <span class="product-badge">Premium Selection</span>
+                    <img src="https://images.unsplash.com/photo-1605197585662-7ef6dc4b591b?auto=format&fit=crop&q=80&w=600" alt="Premium Kaju Katli">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Kaju Katli</h3>
+                    <p>An absolute royal classic made from the finest grade of rich cashew nuts, ground into a silky smooth paste, cooked to a flawless melt-in-the-mouth consistency, and adorned with pure silver leaf.</p>
+                </div>
+            </div>
+
+            <!-- Authentic Gulab Jamun -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <span class="product-badge">Traditional Delicacy</span>
+                    <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=600" alt="Garam Gulab Jamun">
+                </div>
+                <div class="product-info">
+                    <h3>Garam Gulab Jamun</h3>
+                    <p>Soft, delicate dumplings prepared from house-reduced milk solids (Mawa), deep-fried to a perfect rich golden-brown hue in pure Desi Ghee, and slow-soaked in hot rose-water scented sugar syrup.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Developer Acknowledgement Block -->
+    <section class="developer-section">
+        <div class="dev-box">
+            <h4><i class="fa-solid fa-code" style="color: var(--gold-primary); margin-right: 10px;"></i> Architectural Concept & Development</h4>
+            <p>Designed, Engineered and Maintained Globally with High-Fidelity Standards by <strong>Bhairu Sharma</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Premium Footer Network & Direct Contact Integration -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>SGMB Legacy</h3>
+                <p>Shree Ganganagar Misthan Bhandar has been the ultimate beacon of traditional taste, culinary honesty, and unparalleled purity across Ramgarh, Jaisalmer for years. We specialize in making your celebrations truly unforgettable.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Reach Us</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Main Market, Ramgarh, Jaisalmer, Rajasthan, 345022</li>
+                    <li><i class="fa-solid fa-clock"></i> Open Every Day: 6:00 AM - 10:00 PM</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@sgmbsweets.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Direct Orders</h3>
+                <p>Click below to connect directly with our managers for event bookings, bulk gifting, or immediate festival orders:</p>
+                <a href="tel:869249680" class="footer-call-btn"><i class="fa-solid fa-phone"></i> Call 869249680</a><br>
+                <a href="tel:9928644895" class="footer-call-btn" style="background-color: var(--gold-primary); color: #000; margin-top: 15px;"><i class="fa-solid fa-phone"></i> Call 9928644895</a>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <p>&copy; 2026 Shree Ganganagar Misthan Bhandar (SGMB). All Rights Reserved. Every single legal right, structural asset, brand trademark, and culinary recipe configurations remain permanently reserved under the absolute ownership of SGMB.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
