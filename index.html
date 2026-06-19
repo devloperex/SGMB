@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Ganganagar Misthan Bhandar - Ramgarh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-color: #d4145a; /* Deep Sweet Pink/Red */
+            --secondary-color: #fbb03b; /* Pure Desi Ghee Yellow */
+            --dark-color: #2b2b2b;
+            --light-color: #fff9f0;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .logo-text {
+            font-family: 'Rozha One', serif;
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        header h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .badge {
+            background-color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Quick Info Bar */
+        .info-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-item i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* About & Owners Section */
+        .about-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .heading {
+            font-family: 'Rozha One', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .sub-heading {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .owners-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .owner-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--secondary-color);
+            min-width: 280px;
+        }
+
+        .owner-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .owner-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .owner-card p {
+            color: #777;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Top Quality Gallery / Menu */
+        .gallery-section {
+            background-color: #fff;
+            padding: 80px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            height: 350px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            padding-top: 60px;
+        }
+
+        /* Footer / Contact Section */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-call {
+            background-color: #25d366; /* WhatsApp/Call Green */
+            color: white;
+        }
+
+        .btn-call:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo-text { font-size: 2.3rem; }
+            header h2 { font-size: 1.3rem; }
+            .heading { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="badge"><i class="fa-solid fa-medal"></i> Pure Desi Ghee Sweets</span>
+        <h1 class="logo-text">Shree Ganganagar Misthan Bhandar</h1>
+        <h2>Ramgarh (Jaisalmer) ke Mashhoor Swadist Misthan</h2>
+    </header>
+
+    <div class="info-bar">
+        <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <span><strong>Timings:</strong> Subah 6:00 AM se Raat 10:00 PM tak</span>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span><strong>Location:</strong> Ramgarh, Jaisalmer, Rajasthan</span>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <h3 class="heading">Hamare Bare Me</h3>
+        <p class="sub-heading">Hum lekar aate hain aapke liye shuddh mawa, desi ghee ki mithaiyan aur lajawab namkeen. Swad aisa jo aapke har tyohar aur khushi ko dugna kar de.</p>
+        
+        <h3 class="heading" style="font-size: 2rem; margin-top: 20px;">Proprietors</h3>
+        <div class="owners-container">
+            <div class="owner-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <h4>Ramkishan Sharma</h4>
+                <p>Proprietor</p>
+            </div>
+            <div class="owner-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <h4>Deendayal Sharma</h4>
+                <p>Proprietor</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h3 class="heading" style="text-align: center; margin-bottom: 50px;">Hamari Top Quality Mithaiyan</h3>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=600" alt="Special Motichoor Ladoo">
+                <div class="item-overlay">
+                    <h3>Shahi Motichoor Ladoo</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1605197585662-7ef6dc4b591b?auto=format&fit=crop&q=80&w=600" alt="Premium Kaju Katli">
+                <div class="item-overlay">
+                    <h3>Premium Kaju Katli</h3>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&q=80&w=600" alt="Garam Gulab Jamun">
+                <div class="item-overlay">
+                    <h3>Garam Gulab Jamun</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3 class="heading" style="color: var(--secondary-color);">Order & Enquiry Ke Liye Call Karein</h3>
+            <p>Kisi bhi shaadi, buraat ya party ke order ke liye niche diye numbers par turant sampark karein.</p>
+            
+            <div class="cta-buttons">
+                <a href="tel:869249680" class="btn btn-call">
+                    <i class="fa-solid fa-phone"></i> Call: 869249680
+                </a>
+                <a href="tel:9928644895" class="btn btn-call">
+                    <i class="fa-solid fa-phone"></i> Call: 9928644895
+                </a>
+            </div>
+
+            <p style="margin-top: 20px;"><i class="fa-solid fa-store"></i> <strong>Address:</strong> Shree Ganganagar Misthan Bhandar, Main Market, Ramgarh, Jaisalmer (Raj.)</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Shree Ganganagar Misthan Bhandar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
