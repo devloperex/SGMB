@@ -488,7 +488,9 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+<button id="installBtn" style="display: none; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    App Install Karein
+    </button>
     <!-- Hero Showcase Section -->
     <section class="hero" id="home">
         <div class="product-badge" style="position: relative; top: 0; right: 0; display: inline-block; margin-bottom: 20px;">The Gold Standard of Sweets</div>
@@ -639,7 +641,32 @@
         <div class="copyright-bar">
             <p>&copy; 2026 Shree Ganganagar Misthan Bhandar (SGMB). All Rights Reserved. Every single legal right, structural asset, brand trademark, and culinary recipe configurations remain permanently reserved under the absolute ownership of SGMB.</p>
         </div>
-    </footer>
+    </footer><script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'block'; // Button ko dikhayega
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response: ${outcome}`);
+                deferredPrompt = null;
+                installBtn.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed successfully!');
+            installBtn.style.display = 'none';
+        });
+    </script>
+
 
 </body>
 </html>
