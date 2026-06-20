@@ -42,6 +42,37 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Base Styles */
+body {
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-family: Arial, sans-serif;
+}
+
+/* Dark Mode ke liye class */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Button aur Hover Effect */
+.btn-cool {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hover ko smooth banany ke liye */
+}
+
+/* Jab button par mouse jayega ya touch hoga */
+.btn-cool:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Chota sa zoom effect */
+    box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.4);
+        }
         :root {
             --gold-primary: #D4AF37;
             --gold-dark: #AA7C11;
@@ -517,7 +548,19 @@
         <p>Experiencing generations of unmatched taste, purity, and heritage crafted meticulously from 100% organic ingredients and authentic Indian traditional configurations.</p>
         <a href="#products" class="gold-btn">Explore Royal Collection</a>
     </section>
+<button id="theme-toggle" class="btn-cool" style="margin: 20px;">🌙 Dark Mode</button>
 
+<hr>
+
+<div style="max-width: 400px; margin: 20px;">
+    <h3>Contact Me</h3>
+    <form action="https://formspree.io/f/your-email@example.com" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+        <input type="text" name="name" placeholder="Aapka Naam" required style="padding: 8px;">
+        <input type="email" name="_replyto" placeholder="Aapki Email" required style="padding: 8px;">
+        <textarea name="message" placeholder="Message likhein..." required style="padding: 8px; height: 100px;"></textarea>
+        <button type="submit" class="btn-cool">Send Message</button>
+    </form>
+</div>
     <!-- Luxury Quick Info Strip -->
     <div class="luxury-strip">
         <div class="strip-item">
@@ -713,7 +756,21 @@
         });
     </script>
     
-
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    themeToggle.addEventListener('click', () => {
+        // Body par dark-theme class ko toggle karein
+        document.body.classList.toggle('dark-theme');
+        
+        // Button ka text aur emoji badlein
+        if (document.body.classList.contains('dark-theme')) {
+            themeToggle.textContent = "☀️ Light Mode";
+        } else {
+            themeToggle.textContent = "🌙 Dark Mode";
+        }
+    });
+</script>
 
 </body>
 </html>
