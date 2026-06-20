@@ -562,56 +562,61 @@ body.dark-theme .form-input {
         <p>Experiencing generations of unmatched taste, purity, and heritage crafted meticulously from 100% organic ingredients and authentic Indian traditional configurations.</p>
         <a href="#products" class="gold-btn">Explore Royal Collection</a>
     </section>
- <div>
-    <div style="border-top: 2px solid #c59b27; margin-bottom: 30px;"></div>
-
-    <h3 style="color: #4a0e17; font-family: serif; font-size: 24px; letter-spacing: 1px; margin-bottom: 20px; font-weight: bold;">
-        CONTACT US
-    </h3>
+ <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding: 60px 20px; box-sizing: border-box;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('box.png'); 
+            background-size: cover; background-position: center; background-repeat: no-repeat;">
     
-    <form action="https://formspree.io/f/mwvjgdvw" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px;">
-      
-      <div>
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="your
-            name" 
-          required 
-          style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; font-family: sans-serif;"
-        >
-      </div>
+    <div style="width: 100%; max-width: 500px; margin: 0 auto;">
+        
+        <div style="border-top: 2px solid #c59b27; margin-bottom: 30px;"></div>
 
-      <div>
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="your email ✉️" 
-          required 
-          style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; font-family: sans-serif;"
-        >
-      </div>
+        <h3 style="color: #4a0e17; font-family: serif; font-size: 24px; letter-spacing: 1px; margin-bottom: 20px; font-weight: bold; text-align: center;">
+            CONTACT US
+        </h3>
+        
+        <form action="https://formspree.io/f/mwvjgdvw" method="POST" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+          
+          <div>
+            <input 
+              type="text" 
+              name="name" 
+              placeholder="your name" 
+              required 
+              style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; font-family: sans-serif; background-color: rgba(255, 255, 255, 0.9);"
+            >
+          </div>
 
-      <div>
-        <textarea 
-          name="message" .
-          placeholder="what you want to say?" 
-          required 
-          style="width: 80%; height: 120px; margin:0 auto; display:block; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; resize: vertical; font-family: sans-serif;"
-        ></textarea> 
-      </div>
+          <div>
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="your Email" 
+              required 
+              style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; font-family: sans-serif; background-color: rgba(255, 255, 255, 0.9);"
+            >
+          </div>
 
-      <button 
-        type="submit" 
-        style="background-color: #c59b27; color: #ffffff; font-size: 16px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s ease; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; max-width: 200px;"
-        onmouseover="this.style.backgroundColor='#a37f1f'"
-        onmouseout="this.style.backgroundColor='#c59b27'"
-      >
-        Send Message
-      </button>
+          <div>
+            <textarea 
+              name="message" 
+              placeholder="Message likhein..." 
+              required 
+              style="width: 100%; height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; resize: vertical; font-family: sans-serif; background-color: rgba(255, 255, 255, 0.9);"
+            ></textarea>
+          </div>
 
-    </form>
-</div>
+          <button 
+            type="submit" 
+            style="background-color: #c59b27; color: #ffffff; font-size: 16px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s ease; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; max-width: 200px; margin: 0 auto; width: 100%;"
+            onmouseover="this.style.backgroundColor='#a37f1f'"
+            onmouseout="this.style.backgroundColor='#c59b27'"
+          >
+            Send Message
+          </button>
+
+        </form>
+    </div>
+ </div>
     <!-- Luxury Quick Info Strip -->
     <div class="luxury-strip">
         <div class="strip-item">
