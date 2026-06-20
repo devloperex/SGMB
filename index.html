@@ -42,37 +42,53 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base Styles */
-body {
-    background-color: #ffffff;
-    color: #333333;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-    font-family: Arial, sans-serif;
-}
-
-/* Dark Mode ke liye class */
+/* Dark Mode ke liye shahi colors */
 body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #1a0a0d !important; /* Deep Royal Maroon/Black */
+    color: #f4e3b1 !important; /* Light Gold text */
 }
 
-/* Button aur Hover Effect */
+body.dark-theme .contact-section h3 {
+    color: #f4e3b1;
+}
+
+/* Premium Button Style (Matches top banner) */
 .btn-cool {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    background-color: #c59b27; /* Gold color */
+    color: #4a0e17; /* Dark Maroon text */
+    padding: 12px 24px;
+    border: 1px solid #a37f1c;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease; /* Hover ko smooth banany ke liye */
+    transition: all 0.3s ease;
 }
 
-/* Jab button par mouse jayega ya touch hoga */
+/* Hover Effect (Thoda dark gold aur zoom) */
 .btn-cool:hover {
-    background-color: #0056b3;
-    transform: scale(1.05); /* Chota sa zoom effect */
-    box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.4);
-        }
+    background-color: #a37f1c;
+    color: #ffffff;
+    transform: translateY(-2px); /* Upward lift effect */
+    box-shadow: 0px 4px 10px rgba(197, 155, 39, 0.3);
+}
+
+/* Input Boxes Shahi Look ke liye */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4a0e17;
+    background-color: #fdfbf7;
+    color: #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+body.dark-theme .form-input {
+    background-color: #2d1519;
+    border: 1px solid #c59b27;
+    color: #f4e3b1;
+}
         :root {
             --gold-primary: #D4AF37;
             --gold-dark: #AA7C11;
@@ -548,17 +564,19 @@ body.dark-theme {
         <p>Experiencing generations of unmatched taste, purity, and heritage crafted meticulously from 100% organic ingredients and authentic Indian traditional configurations.</p>
         <a href="#products" class="gold-btn">Explore Royal Collection</a>
     </section>
-<button id="theme-toggle" class="btn-cool" style="margin: 20px;">🌙 Dark Mode</button>
+<div class="contact-section" style="max-width: 500px; margin: 40px auto; padding: 20px; text-align: center;">
+    
+    <button id="theme-toggle" class="btn-cool" style="margin-bottom: 30px;">🌙 Dark Mode</button>
+    
+    <div style="border-top: 1px solid #c59b27; margin-bottom: 30px;"></div>
 
-<hr>
-
-<div style="max-width: 400px; margin: 20px;">
-    <h3>Contact Me</h3>
-    <form action="https://formspree.io/f/sandeepsharma23666@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
-        <input type="text" name="name" placeholder="Aapka Naam" required style="padding: 8px;">
-        <input type="email" name="_replyto" placeholder="Aapki Email" required style="padding: 8px;">
-        <textarea name="message" placeholder="Message likhein..." required style="padding: 8px; height: 100px;"></textarea>
-        <button type="submit" class="btn-cool">Send Message</button>
+    <h3 style="color: #4a0e17; font-family: serif; font-size: 24px; letter-spacing: 1px;">CONTACT US</h3>
+    
+    <form action="https://formspree.io/f/sandeepsharma23666@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px; text-align: left;">
+        <input type="text" name="name" class="form-input" placeholder="Aapka Naam" required>
+        <input type="email" name="_replyto" class="form-input" placeholder="Aapki Email" required>
+        <textarea name="message" class="form-input" placeholder="Message likhein..." required style="height: 120px; resize: none;"></textarea>
+        <button type="submit" class="btn-cool" style="width: 100%;">Send Message</button>
     </form>
 </div>
     <!-- Luxury Quick Info Strip -->
