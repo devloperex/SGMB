@@ -562,30 +562,55 @@ body.dark-theme .form-input {
         <p>Experiencing generations of unmatched taste, purity, and heritage crafted meticulously from 100% organic ingredients and authentic Indian traditional configurations.</p>
         <a href="#products" class="gold-btn">Explore Royal Collection</a>
     </section>
-<div class="contact-section" style="max-width: 500px; margin: 40px auto; padding: 20px; text-align: center;">
-    
-    <button id="theme-toggle" class="btn-cool" style="margin-bottom: 30px;">🌙 Dark Mode</button>
-    
-    <div style="border-top: 1px solid #c59b27; margin-bottom: 30px;"></div>
+ <div>
+    <div style="border-top: 2px solid #c59b27; margin-bottom: 30px;"></div>
 
-    <h3 style="color: #4a0e17; font-family: serif; font-size: 24px; letter-spacing: 1px;">CONTACT US</h3>
+    <h3 style="color: #4a0e17; font-family: serif; font-size: 24px; letter-spacing: 1px; margin-bottom: 20px; font-weight: bold;">
+        CONTACT US
+    </h3>
     
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/mwvjgdvw"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+    <form action="https://formspree.io/f/mwvjgdvw" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px;">
+      
+      <div>
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="your
+            name" 
+          required 
+          style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; font-family: sans-serif;"
+        >
+      </div>
+
+      <div>
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="your email ✉️" 
+          required 
+          style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; font-family: sans-serif;"
+        >
+      </div>
+
+      <div>
+        <textarea 
+          name="message" .
+          placeholder="what you want to say?" 
+          required 
+          style="width: 100%; height: 120px; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; resize: vertical; font-family: sans-serif;"
+        ></textarea>
+      </div>
+
+      <button 
+        type="submit" 
+        style="background-color: #c59b27; color: #ffffff; font-size: 16px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s ease; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; max-width: 200px;"
+        onmouseover="this.style.backgroundColor='#a37f1f'"
+        onmouseout="this.style.backgroundColor='#c59b27'"
+      >
+        Send Message
+      </button>
+
+    </form>
 </div>
     <!-- Luxury Quick Info Strip -->
     <div class="luxury-strip">
